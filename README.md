@@ -1,6 +1,6 @@
 # max_sub_array
 
-An implementation of max sub-array. I wrote the greedy impl but implemented the divide and conquer version referencing the pseudo algorithmn in "Introduction to Algorithms" by Cormen et al. Although the greedy algorithmn is n^2 and the divide and conquer logarithmic the greedy version performs better for the sample test case (taken from the book).
+An implementation of max sub-array. I wrote the greedy impl but implemented the divide and conquer version referencing the pseudo algorithmn in "Introduction to Algorithms" by Cormen et al. Although the greedy algorithmn is n^2 and the divide and conquer logarithmic the greedy version performs better for the sample test case (taken from the book). I think this is due to the overhead introduced by recursion.
 
 ```
 ===============================================================================
