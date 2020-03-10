@@ -40,7 +40,7 @@ static void benchmark_greedy(picobench::state& s)
 }
 PICOBENCH(benchmark_greedy);
 
-int max_crossing_sub_array(const VALS& vals, int start_at, int mid, int end_at, int& start_index, int& end_index)
+inline int max_crossing_sub_array(const VALS& vals, int start_at, int mid, int end_at, int& start_index, int& end_index)
 {
     int left_max         = vals[mid];
     int left_start_index = mid;
@@ -82,7 +82,7 @@ int max_sub_array_logarithmic(const VALS& vals, int start_at, int end_at, int& s
         return vals[start_at];
     }
     int sze         = end_at - start_at;
-    int mid         = start_at + (sze / 2);
+    int mid         = start_at + (sze >> 1);
 
     int left_start  = 0, left_end = 0;
     int left_max    = max_sub_array_logarithmic(vals, start_at, mid, left_start, left_end);
