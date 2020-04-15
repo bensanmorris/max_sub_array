@@ -120,7 +120,7 @@ static void benchmark_logarithmic(picobench::state& s)
     VALS data = { 13, -3, -25, 20, -3, -16, -23, 18, 20, -7, 12, -5, -22, 15, -4, 7 };
     int start_index = 0, end_index = 0, max = std::numeric_limits<int>::min();
     for(auto _ : s)
-        max = max_sub_array_logarithmic(data, 0, data.size(), start_index, end_index);
+        max = max_sub_array_logarithmic(data, 0, data.size()-1, start_index, end_index);
     std::cout << "logarithmic: " << start_index << "," << end_index << ", " << max << std::endl;
 }
 PICOBENCH(benchmark_logarithmic);
